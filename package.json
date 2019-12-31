@@ -1,8 +1,10 @@
 {
 	"name": "open-window-tab-context",
 	"displayName": "Open Window Tab Context",
-	"description": "Add an \"Open in new window\" option to tab context menu.",
-	"version": "0.0.1",
+	"description": "Add an \"Open in new window\" option to tab context menu in editor.",
+	"version": "1.0.0",
+	"icon": "icon/icon.png",
+	"publisher": "takkaO",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
@@ -29,6 +31,10 @@
 				}
 			]
 		}
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/takkaO/VSCode-OpenWindowTabContext.git"
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
