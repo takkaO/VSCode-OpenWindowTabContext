@@ -5,6 +5,7 @@
 	"version": "1.0.0",
 	"icon": "icon/icon.png",
 	"publisher": "takkaO",
+	"license": "MIT",
 	"engines": {
 		"vscode": "^1.41.0"
 	},

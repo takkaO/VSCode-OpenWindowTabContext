@@ -4,15 +4,12 @@
 
 VSCode extension which add an "Open in new window" option to the right-click tab context menu in editor.
 
-#### Test Environment
-- [x] Windows10
-- [x] Linux (Ubuntu 18.04)
-- [ ] MacOS
+#### Tested Environment
+✅ Windows10
+✅ Linux (Ubuntu 18.04)
+❌ MacOS
 
 ## Release Notes
-
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
 Initial release
