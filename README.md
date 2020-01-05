@@ -7,7 +7,6 @@ VSCode extension which add an "Open in new window" option to the right-click tab
 #### Tested Environment
 ✅ Windows10  
 ✅ Linux (Ubuntu 18.04)  
-❌ MacOS  
 
 ## Release Notes
 ### 1.0.0
