@@ -9,6 +9,13 @@ VSCode extension which add an "Open in new window" option to the right-click tab
 ✅ Linux (Ubuntu 18.04)  
 
 ## Release Notes
+### 1.1.0
+
+- Add VSCode command check function.
+- Support Untitled file.
+- Update README.md.
+- Update icon file.
+
 ### 1.0.0
 
 Initial release

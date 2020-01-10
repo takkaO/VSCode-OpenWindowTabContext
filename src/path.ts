@@ -12,12 +12,6 @@ export function getCodeCommandPath() {
 		return cache[command];
 	}
 
-	var codePath = <string>vscode.workspace.getConfiguration("vscode-open-project").get("codePath");
-	if (codePath && fs.existsSync(codePath)) {
-		cache[command] = codePath;
-		return codePath;
-	}
-
 	if (process.env["PATH"]) {
 		var pathparts = process.env["PATH"].split(path.delimiter);
 		for (var i = 0; i < pathparts.length; i++) {
@@ -33,7 +27,6 @@ export function getCodeCommandPath() {
 }
 
 export function isCodeCommandAvailable(): boolean {
-	var command = correctCommandName("code");
 	return getCodeCommandPath() !== null;
 }
 
