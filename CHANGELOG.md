@@ -4,6 +4,10 @@ All notable changes to the "open-window-tab-context" extension will be documente
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.1.1] - 2020-xx-xx
+### Changed
+- Update README.md.
+
 ## [1.1.0] - 2020-01-10
 ### Changed
 - Add VSCode command check function.
