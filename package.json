@@ -31,7 +31,20 @@
 					"group": "navigation"
 				}
 			]
-		}
+		},
+    "configuration":[
+			{
+				"title": "Open Window Tab Context",
+				"properties": {
+					"owtc.command": {
+						"type": "string",
+						"scope": "application",
+						"default": "code",
+						"description": "Command to open new window."
+					}
+				}
+			}
+		]
 	},
 	"repository": {
 		"type": "git",
