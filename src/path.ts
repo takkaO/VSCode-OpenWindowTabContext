@@ -7,7 +7,7 @@ import path = require("path");
 var cache: { [bin: string]: string; } = {};
 
 export function getCodeCommandPath() {
-  var exec: unknown = vscode.workspace.getConfiguration().get("owtc.command");
+  	var exec: unknown = vscode.workspace.getConfiguration().get("owtc.command");
 	var command = correctCommandName(typeof exec === "string" ? String(exec) : "code");
 	if (cache[command]) {
 		return cache[command];
