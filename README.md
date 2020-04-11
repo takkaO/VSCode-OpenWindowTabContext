@@ -10,6 +10,10 @@ VSCode extension which add an "Open in new window" option to the right-click tab
 ✅ Mac  
 
 ## Release Notes
+### 1.3.0
+
+- Merge pull-request (By Mr-Pyro).
+
 ### 1.2.0
 
 - Hotfix (Package updates).

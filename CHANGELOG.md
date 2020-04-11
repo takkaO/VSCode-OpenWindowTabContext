@@ -4,8 +4,12 @@ All notable changes to the "open-window-tab-context" extension will be documente
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [1.2.0] - 2020-04-05
+## [1.3.0] - 2020-04-11
 ### Changed
+- Merge pull-request (By Mr-Pyro).
+
+## [1.2.0] - 2020-04-05
+### Security
 - Hotfix (Package updates)
 
 ## [1.1.0] - 2020-01-10
