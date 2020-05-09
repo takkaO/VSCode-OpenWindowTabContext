@@ -4,8 +4,13 @@ All notable changes to the "open-window-tab-context" extension will be documente
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.4.0] - 2020-05-09
+### Fixed
+- Fix issue that file cannot be opened if the path contains spaces (#5).
+- Update README.md and CHANGELOG.md
+
 ## [1.3.1] - 2020-04-11
-## Changed
+### Changed
 - Update README.md and CHANGELOG.md
 
 ## [1.3.0] - 2020-04-11

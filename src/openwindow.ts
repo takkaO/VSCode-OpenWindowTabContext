@@ -19,7 +19,9 @@ function launchNewInstance(filepath: string) {
 	var codeCommand = path.getCodeCommandPath();
 
 	if (codeCommand) {
-		cp.execFile(codeCommand, ['-n', filepath]);
+		filepath = "\"" + filepath + "\"";
+		codeCommand = "\"" + codeCommand + "\"";
+		cp.execFile(codeCommand, ['-n', filepath], {shell: true});
 	} else {
 		vscode.window.showErrorMessage('Failed to fetch VScode execute path.');
 	}

@@ -10,7 +10,7 @@ This extension is also compatible with VSCodium and Eclipse Theia.
 ✅ Linux (Ubuntu 18.04)  
 ✅ Mac (Mojave)
 
-#### Requirement
+#### Requirement (Mac)
 You need to add ```code``` to PATH.  
 https://code.visualstudio.com/docs/setup/mac
 
@@ -24,6 +24,11 @@ https://code.visualstudio.com/docs/setup/mac
 
 
 ## Release Notes
+### 1.4.0
+
+- Fix issue that file cannot be opened if the path contains spaces (#5).
+- Update README.md and CHANGELOG.md
+
 ### 1.3.1
 
 - Update README.md and CHANGELOG.md
