@@ -2,7 +2,7 @@
 	"name": "open-window-tab-context",
 	"displayName": "Open Window Tab Context",
 	"description": "Add an \"Open in new window\" option to tab context menu in editor.",
-	"version": "1.4.0",
+	"version": "1.4.1",
 	"icon": "icon/icon.png",
 	"publisher": "takkaO",
 	"license": "MIT",

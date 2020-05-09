@@ -6,9 +6,11 @@ VSCode extension which add an "Open in new window" option to the right-click tab
 This extension is also compatible with VSCodium and Eclipse Theia.  
 
 #### Tested Environment
-✅ Windows 10  
-✅ Linux (Ubuntu 18.04)  
-✅ Mac (Mojave)
+|OS|Tested version|Result|
+|:---:|:---:|:---:|
+|Windows 10|1.4.1|✅|
+|Linux (Ubuntu 20.04)|1.4.1|✅|
+|Mac (Mojave)|1.2.0|✅|
 
 #### Requirement (Mac)
 You need to add ```code``` to PATH.  
@@ -24,6 +26,10 @@ https://code.visualstudio.com/docs/setup/mac
 
 
 ## Release Notes
+### 1.4.1
+
+- Update README.md and CHANGELOG.md
+
 ### 1.4.0
 
 - Fix issue that file cannot be opened if the path contains spaces (#5).
