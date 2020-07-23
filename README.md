@@ -8,7 +8,7 @@ This extension is also compatible with VSCodium and Eclipse Theia.
 #### Tested Environment
 |OS|Tested version|Result|
 |:---:|:---:|:---:|
-|Windows 10|1.4.1|✅|
+|Windows 10|1.4.2|✅|
 |Linux (Ubuntu 20.04)|1.4.1|✅|
 |Mac (Mojave)|1.2.0|✅|
 
@@ -26,6 +26,12 @@ https://code.visualstudio.com/docs/setup/mac
 
 
 ## Release Notes
+### 1.4.2
+
+- Update README.md and CHANGELOG.md
+- Update some packages
+- Tweak fix
+
 ### 1.4.1
 
 - Update README.md and CHANGELOG.md
