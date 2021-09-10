@@ -2,7 +2,7 @@
 	"name": "open-window-tab-context",
 	"displayName": "Open Window Tab Context",
 	"description": "Add an \"Open in new window\" option to tab context menu in editor.",
-	"version": "1.4.3",
+	"version": "1.4.4",
 	"icon": "icon/icon.png",
 	"publisher": "takkaO",
 	"license": "MIT",
@@ -26,9 +26,14 @@
 		"menus": {
 			"editor/title/context": [
 				{
-					"when": "resourceScheme == file || resourceScheme == untitled",
+					"when": "resourceScheme =~ /^untitled$|^file$/ && config.owtc.displayPosition == 'Top'",
 					"command": "open-window-tab-context.openFileInNewWindow",
 					"group": "navigation"
+				},
+				{
+					"when": "resourceScheme =~ /^untitled$|^file$/ && config.owtc.displayPosition == 'Bottom'",
+					"command": "open-window-tab-context.openFileInNewWindow",
+					"group": "command"
 				}
 			]
 		},
@@ -41,6 +46,21 @@
 						"scope": "application",
 						"default": "code",
 						"description": "Command to open new window."
+					},
+					"owtc.displayPosition": {
+						"displayName": "Display Position",
+						"type": "string",
+						"scope": "application",
+						"enum": ["Top", "Bottom"],
+						"default": "Top",
+						"description": "Specify the context display position."
+					},
+					"owtc.autoClose": {
+						"displayName": "Auto Close",
+						"type": "boolean",
+						"scope": "application",
+						"default": false,
+						"description": "Automatically closes the tabs in the original window."
 					}
 				}
 			}
