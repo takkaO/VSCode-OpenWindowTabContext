@@ -26,6 +26,7 @@ export async function openFileInNewWindow(context?: any) {
 			// When the active tab and the tab opened in a new window are the same
 			vscode.commands.executeCommand('workbench.action.closeActiveEditor');
 		}
+		/*
 		else {
 			// When the active tab and the tab opened in a new window are different
 			let tmp = vscode.Uri.file(activeFilePath);                                                     // Backup the current active editor
@@ -33,7 +34,7 @@ export async function openFileInNewWindow(context?: any) {
 			await vscode.commands.executeCommand('workbench.action.closeActiveEditor');                    // close active editor
 			vscode.commands.executeCommand<vscode.TextDocumentShowOptions>("vscode.open", tmp);            // Restore the active editor from a backup
 		}
-
+		*/
 	} else {
 		vscode.window.showWarningMessage('Command failed. There is not a file.');
 	}

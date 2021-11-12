@@ -56,12 +56,12 @@
 						"description": "Specify the context display position."
 					},
 					"owtc.autoClose": {
-						"displayName": "Auto Close (beta)",
+						"displayName": "Auto Close Tab (beta)",
 						"type": "string",
 						"scope": "window",
 						"enum": ["Enable", "Disable"],
-						"default": "Enable",
-						"description": "Automatically closes the tabs in the original window."
+						"default": "Disable",
+						"description": "Close tabs in the original window if editor is active."
 					}
 				}
 			}
@@ -79,13 +79,13 @@
 		"test": "node ./out/test/runTest.js"
 	},
 	"devDependencies": {
-		"@types/glob": "^7.1.4",
+		"@types/glob": "^7.2.0",
 		"@types/mocha": "^9.0.0",
-		"@types/node": "^16.10.1",
+		"@types/node": "^16.11.7",
 		"@types/vscode": "^1.45.0",
 		"glob": "^7.2.0",
-		"mocha": "^9.1.2",
-		"typescript": "^4.4.3",
+		"mocha": "^9.1.3",
+		"typescript": "^4.4.4",
 		"tslint": "^6.1.3",
 		"vscode-test": "^1.6.1"
 	}
