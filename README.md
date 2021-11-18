@@ -15,8 +15,8 @@ This extension is also compatible with VSCodium and Eclipse Theia.
 #### Tested Environment
 |OS|Tested version|Result|
 |:---:|:---:|:---:|
-|Windows 10|1.5.0|✅|
-|Linux (Ubuntu 20.04)|1.5.0|✅|
+|Windows 10|1.6.0|✅|
+|Linux (Ubuntu 20.04)|1.6.0|✅|
 |Mac (Mojave)|1.2.0|✅|
 
 #### Requirement (Mac)
@@ -33,6 +33,13 @@ https://code.visualstudio.com/docs/setup/mac
 
 
 ## Release Notes
+### 1.6.0
+
+- Security update (update some packages)
+- Added the ability to auto close active editor (beta).
+- Introduced volta to manage node version.
+- Update README.md and CHANGELOG.md
+
 ### 1.5.0
 
 - Security update (update some packages)
