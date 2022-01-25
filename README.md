@@ -15,8 +15,8 @@ This extension is also compatible with VSCodium and Eclipse Theia.
 #### Tested Environment
 |OS|Tested version|Result|
 |:---:|:---:|:---:|
-|Windows 10|1.6.0|✅|
-|Linux (Ubuntu 20.04)|1.6.0|✅|
+|Windows 10|1.6.1|✅|
+|Linux (Ubuntu 20.04)|1.6.1|✅|
 |Mac (Mojave)|1.2.0|✅|
 
 #### Requirement (Mac)
@@ -33,6 +33,10 @@ https://code.visualstudio.com/docs/setup/mac
 
 
 ## Release Notes
+### 1.6.1
+
+- Security update (update some packages) 
+
 ### 1.6.0
 
 - Security update (update some packages)
