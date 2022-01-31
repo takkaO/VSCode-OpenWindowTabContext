@@ -48,7 +48,6 @@
 						"description": "Command to open new window."
 					},
 					"owtc.displayPosition": {
-						"displayName": "Display Position",
 						"type": "string",
 						"scope": "window",
 						"enum": [
@@ -59,7 +58,6 @@
 						"description": "Specify the context display position."
 					},
 					"owtc.autoClose": {
-						"displayName": "Auto Close Tab (beta)",
 						"type": "string",
 						"scope": "window",
 						"enum": [
@@ -67,7 +65,7 @@
 							"Disable"
 						],
 						"default": "Disable",
-						"description": "Close tabs in the original window if editor is active."
+						"description": "Close tabs in the original window if editor is active. (beta)"
 					}
 				}
 			}
@@ -87,7 +85,7 @@
 	"devDependencies": {
 		"@types/glob": "^7.2.0",
 		"@types/mocha": "^9.1.0",
-		"@types/node": "^17.0.12",
+		"@types/node": "^17.0.13",
 		"@types/vscode": "^1.45.0",
 		"glob": "^7.2.0",
 		"mocha": "^9.2.0",
