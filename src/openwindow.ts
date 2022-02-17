@@ -6,9 +6,14 @@ import cp = require('child_process');
 
 export const OpenFileInNewWindowCommandId = 'open-window-tab-context.openFileInNewWindow';
 
-export async function openFileInNewWindow(context?: any) {
+export async function openFileInNewWindow(context?: any, arg?: any) {
 	if (context instanceof vscode.Uri) {
 		launchNewInstance(context.fsPath);
+
+		if (arg instanceof Array) {
+			// When call from file explorer
+			return;
+		}
 
 		if (vscode.workspace.getConfiguration().get("owtc.autoClose") === "Disable") {
 			// If disable auto close mode, finish all.

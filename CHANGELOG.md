@@ -4,12 +4,18 @@ All notable changes to the "open-window-tab-context" extension will be documente
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.7.0] - 2022-02-17
+### Changed
+- Add features to show the context menu on the file explorer (beta).
+- Update README.md and CHANGELOG.md
+- Update some packages
+
 ## [1.6.1] - 2022-01-26
 ### Changed
 - Update README.md and CHANGELOG.md
 ### Fixed
 - Security update (update some packages)
-- 
+ 
 ## [1.6.0] - 2021-11-18
 ### Changed
 - Added the ability to auto close active editor (beta).
