@@ -2,7 +2,7 @@
 	"name": "open-window-tab-context",
 	"displayName": "Open Window Tab Context",
 	"description": "Add an \"Open in new window\" option to tab context menu in editor.",
-	"version": "1.7.0",
+	"version": "1.8.0",
 	"icon": "icon/icon.png",
 	"publisher": "takkaO",
 	"license": "MIT",
@@ -84,6 +84,12 @@
 						"scope": "window",
 						"default": false,
 						"description": "Display the 'Open in new window' context in File Explorer as well. (beta)"
+					},
+					"owtc.overrideOpenFileMethod": {
+						"type": "boolean",
+						"scope": "window",
+						"default": false,
+						"description": "Override open file method to open new window. (beta)"
 					}
 				}
 			}
