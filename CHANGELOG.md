@@ -4,6 +4,12 @@ All notable changes to the "open-window-tab-context" extension will be documente
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.8.0] - 2022-03-05
+### Changed
+- Add features to override "Open File" menu to open in a new window (beta).
+- Update README.md and CHANGELOG.md
+- Update some packages
+
 ## [1.7.0] - 2022-02-17
 ### Changed
 - Add features to show the context menu on the file explorer (beta).
