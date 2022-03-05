@@ -4,6 +4,7 @@ import * as vscode from 'vscode';
 import * as op from './openwindow';
 import { isCodeCommandAvailable } from './path';
 
+
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
@@ -24,32 +25,29 @@ export function activate(context: vscode.ExtensionContext) {
 	// Method implementation
 	async function owtcOpenFileOverride(methodDisposer: any) {
 		methodDisposer.dispose();	// Abort and Dispose override method
-
+		
 		if (vscode.workspace.getConfiguration().get("owtc.overrideOpenFileMethod") === true) {
 			// Call override method
 			const options: vscode.OpenDialogOptions = {
-				canSelectMany: false,
-				openLabel: 'Open',
-				filters: {
-				   'All files': ['*']
-			   }
-		   };
-		   
-		   vscode.window.showOpenDialog(options).then(fileUri => {
-			   if (fileUri && fileUri[0]) {
-				   console.log('Selected file: ' + fileUri[0].fsPath);
-			   }
-		   });
+				canSelectMany: false
+			};
+
+			vscode.window.showOpenDialog(options).then(fileUri => {
+				if (fileUri && fileUri[0]) {
+					op.openFileInNewWindow(fileUri[0]);
+				}
+			});
 		}
 		else {
 			// Call original method
 			await vscode.commands.executeCommand("workbench.action.files.openFile");
 		}
 
+		//	re-register override method
 		let owtcOverrideMethod = vscode.commands.registerCommand("workbench.action.files.openFile", async (arg) => {
 			owtcOpenFileOverride(owtcOverrideMethod);
 		})
-		context.subscriptions.push(owtcOverrideMethod);	//	re-register override method
+		context.subscriptions.push(owtcOverrideMethod);
 	}
 
 	context.subscriptions.push(owtcOverrideMethod);

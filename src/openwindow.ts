@@ -10,7 +10,7 @@ export async function openFileInNewWindow(context?: any, arg?: any) {
 	if (context instanceof vscode.Uri) {
 		launchNewInstance(context.fsPath);
 
-		if (arg instanceof Array) {
+		if (arg instanceof Array || arg == undefined) {
 			// When call from file explorer
 			return;
 		}
