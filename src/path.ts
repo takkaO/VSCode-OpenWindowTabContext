@@ -15,6 +15,7 @@ export function getCodeCommandPath() {
 
 	let dir_name = path.dirname(process.execPath);
 	let bin_path = path.join(dir_name, "bin", command);
+	//console.log(bin_path) 
 	if (fs.existsSync(bin_path)) {
 		cache[command] = bin_path;
 		return bin_path;
