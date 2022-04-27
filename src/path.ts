@@ -13,9 +13,14 @@ export function getCodeCommandPath() {
 		return cache[command];
 	}
 
-	let dir_name = path.dirname(process.execPath);
-	let bin_path = path.join(dir_name, "bin", command);
-	//console.log(bin_path) 
+	let dir_name = process.cwd();
+	if (process.platform !== "darwin") {
+		// If platform is not Mac, add bin dir
+		dir_name = path.join(dir_name, "bin");
+	}
+	let bin_path = path.join(dir_name, command);
+	//console.log(bin_path);
+
 	if (fs.existsSync(bin_path)) {
 		cache[command] = bin_path;
 		return bin_path;

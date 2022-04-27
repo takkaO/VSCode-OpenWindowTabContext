@@ -4,7 +4,7 @@ All notable changes to the "open-window-tab-context" extension will be documente
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [1.9.0] - 2022-04-XX
+## [1.9.0] - 2022-04-27
 ### Changed
 - Remove features to override "Open File" menu to open in a new window (1.8.0) because already implemented as Microsoft.
 - Improved command path search process
