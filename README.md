@@ -14,22 +14,26 @@
 
 ![example2](https://github.com/takkaO/VSCode-OpenWindowTabContext/blob/images/example2.gif?raw=true)
 
-
 VSCode extension which add an "Open in new window" option to the right-click tab context menu in editor.  
 This extension is also compatible with VSCodium and Eclipse Theia.
 
 #### Tested Environment
 
+##### VSCode (1.66.2)
+
 |          OS          | Tested version | Result |
 | :------------------: | :------------: | :----: |
 |      Windows 10      |     1.9.0      |   ✅   |
-| Linux (Ubuntu 20.04) |     1.9.0      |   ✅   |
-|     Mac (Mojave)     |     1.2.0      |   ✅   |
+| Linux (Ubuntu 22.04) |     1.9.0      |   ✅   |
+|    Mac (Monterey)    |     1.9.0      |   ✅   |
 
-#### Requirement (Mac)
+##### VSCodium ()
 
-You need to add `code` to PATH.  
-https://code.visualstudio.com/docs/setup/mac
+|          OS          | Tested version | Result |
+| :------------------: | :------------: | :----: |
+|      Windows 10      |     1.9.0      |   ✅   |
+| Linux (Ubuntu 22.04) |     1.9.0      |   ✅   |
+|    Mac (Monterey)    |     1.9.0      |   ✅   |
 
 #### How to change open editor
 
