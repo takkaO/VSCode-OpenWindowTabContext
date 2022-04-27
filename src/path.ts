@@ -13,17 +13,22 @@ export function getCodeCommandPath() {
 		return cache[command];
 	}
 
-	let dir_name = process.cwd();
-	if (process.platform !== "darwin") {
-		// If platform is not Mac, add bin dir
-		dir_name = path.join(dir_name, "bin");
-	}
-	let bin_path = path.join(dir_name, command);
-	//console.log(bin_path);
+	let code_path: string[] = [];
+	// candidate 1
+	code_path.push(path.join(path.dirname(process.execPath), "bin", command));
+	// candidate 2
+	code_path.push(path.join(process.cwd(), command));
+	// candidate 3
+	code_path.push(path.join(process.cwd(), "bin", command));
 
-	if (fs.existsSync(bin_path)) {
-		cache[command] = bin_path;
-		return bin_path;
+	console.log(code_path);
+
+	for (const bin_path of code_path) {
+		if (fs.existsSync(bin_path)) {
+			console.log(bin_path);
+			cache[command] = bin_path;
+			return bin_path;
+		}	
 	}
 
 	return null;
