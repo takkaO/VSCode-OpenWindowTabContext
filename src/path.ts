@@ -21,11 +21,16 @@ export function getCodeCommandPath() {
 		candidate_paths.push(code_path);
 	}
 	// candidate 2
-	code_path = path.join(process.cwd(), command);
+	code_path = path.join(path.dirname(process.execPath), "../Resources/app/bin", command);
 	if (fs.existsSync(code_path)) {
 		candidate_paths.push(code_path);
 	}
 	// candidate 3
+	code_path = path.join(process.cwd(), command);
+	if (fs.existsSync(code_path)) {
+		candidate_paths.push(code_path);
+	}
+	// candidate 4
 	code_path = path.join(process.cwd(), "bin", command);
 	if (fs.existsSync(code_path)) {
 		candidate_paths.push(code_path);
