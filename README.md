@@ -27,7 +27,7 @@ This extension is also compatible with VSCodium and Eclipse Theia.
 | Linux (Ubuntu 22.04) |     1.9.0      |   ✅   |
 |    Mac (Monterey)    |     1.9.0      |   ✅   |
 
-##### VSCodium ()
+##### VSCodium (1.66.2)
 
 |          OS          | Tested version | Result |
 | :------------------: | :------------: | :----: |

@@ -13,22 +13,43 @@ export function getCodeCommandPath() {
 		return cache[command];
 	}
 
-	let code_path: string[] = [];
+	let code_path = "";
+	let candidate_paths: string[] = [];
 	// candidate 1
-	code_path.push(path.join(path.dirname(process.execPath), "bin", command));
+	code_path = path.join(path.dirname(process.execPath), "bin", command);
+	if (fs.existsSync(code_path)) {
+		candidate_paths.push(code_path);
+	}
 	// candidate 2
-	code_path.push(path.join(process.cwd(), command));
+	code_path = path.join(process.cwd(), command);
+	if (fs.existsSync(code_path)) {
+		candidate_paths.push(code_path);
+	}
 	// candidate 3
-	code_path.push(path.join(process.cwd(), "bin", command));
+	code_path = path.join(process.cwd(), "bin", command);
+	if (fs.existsSync(code_path)) {
+		candidate_paths.push(code_path);
+	}
 
-	console.log(code_path);
+	//console.log(candidate_paths);
 
-	for (const bin_path of code_path) {
-		if (fs.existsSync(bin_path)) {
-			console.log(bin_path);
-			cache[command] = bin_path;
-			return bin_path;
-		}	
+	if (candidate_paths.length === 0) {
+		return null;
+	}
+
+	if (candidate_paths.length === 1) {
+		cache[command] = candidate_paths[0];
+		return candidate_paths[0];
+	}
+
+	// when hit multiple candidates
+	for (const p of candidate_paths) {
+		const contents = fs.readFileSync(p, 'utf-8');
+		if (contents.includes("VSCODE") && contents.includes("ELECTRON")) {
+			// easy check file contents
+			cache[command] = p;
+			return p;
+		}
 	}
 
 	return null;
