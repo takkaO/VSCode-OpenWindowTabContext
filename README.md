@@ -14,26 +14,26 @@
 
 ![example2](https://github.com/takkaO/VSCode-OpenWindowTabContext/blob/images/example2.gif?raw=true)
 
-**Since version 1.8.0, the "Open File" menu can be overridden to open in a new window.**  
- (You need to enable it from settings)
-
-![example3](https://github.com/takkaO/VSCode-OpenWindowTabContext/blob/images/example3.gif?raw=true)
-
 VSCode extension which add an "Open in new window" option to the right-click tab context menu in editor.  
 This extension is also compatible with VSCodium and Eclipse Theia.
 
 #### Tested Environment
 
+##### VSCode (1.66.2)
+
 |          OS          | Tested version | Result |
 | :------------------: | :------------: | :----: |
-|      Windows 10      |     1.8.0      |   ✅   |
-| Linux (Ubuntu 20.04) |     1.8.0      |   ✅   |
-|     Mac (Mojave)     |     1.2.0      |   ✅   |
+|      Windows 10      |     1.9.0      |   ✅   |
+| Linux (Ubuntu 22.04) |     1.9.0      |   ✅   |
+|    Mac (Monterey)    |     1.9.0      |   ✅   |
 
-#### Requirement (Mac)
+##### VSCodium (1.66.2)
 
-You need to add `code` to PATH.  
-https://code.visualstudio.com/docs/setup/mac
+|          OS          | Tested version | Result |
+| :------------------: | :------------: | :----: |
+|      Windows 10      |     1.9.0      |   ✅   |
+| Linux (Ubuntu 22.04) |     1.9.0      |   ✅   |
+|    Mac (Monterey)    |     1.9.0      |   ✅   |
 
 #### How to change open editor
 
@@ -45,6 +45,14 @@ https://code.visualstudio.com/docs/setup/mac
 | VSCodium | codium  |
 
 ## Release Notes
+
+### 1.9.0
+
+- Remove features to override "Open File" menu to open in a new window (1.8.0) because already implemented as Microsoft.
+- Improved command path search process
+- Support VSCode portable edition (#12)
+- Update README.md and CHANGELOG.md
+- Update some packages
 
 ### 1.8.0
 
