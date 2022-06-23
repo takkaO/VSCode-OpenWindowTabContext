@@ -19,109 +19,38 @@ This extension is also compatible with VSCodium and Eclipse Theia.
 
 #### Tested Environment
 
-##### VSCode (1.66.2)
+##### VSCode (1.68.1)
 
 |          OS          | Tested version | Result |
 | :------------------: | :------------: | :----: |
-|      Windows 10      |     1.9.0      |   ✅   |
-| Linux (Ubuntu 22.04) |     1.9.0      |   ✅   |
-|    Mac (Monterey)    |     1.9.0      |   ✅   |
+|      Windows 10      |     1.10.0     |   ✅   |
+| Linux (Ubuntu 22.04) |     1.10.0     |   ✅   |
+|    Mac (Monterey)    |     1.10.0     |   ✅   |
 
-##### VSCodium (1.66.2)
+##### VSCode Insiders (1.69.0-insider)
+
+|     OS     | Tested version | Result |
+| :--------: | :------------: | :----: |
+| Windows 10 |     1.10.0     |   ✅   |
+
+##### VSCodium (1.68.1)
 
 |          OS          | Tested version | Result |
 | :------------------: | :------------: | :----: |
-|      Windows 10      |     1.9.0      |   ✅   |
-| Linux (Ubuntu 22.04) |     1.9.0      |   ✅   |
-|    Mac (Monterey)    |     1.9.0      |   ✅   |
+|      Windows 10      |     1.10.0     |   ✅   |
+| Linux (Ubuntu 22.04) |     1.10.0     |   ✅   |
+|    Mac (Monterey)    |     1.10.0     |   ✅   |
 
 #### How to change open editor
 
 `Preference` -> `Settings` -> `Extensions` -> `Open Window Tab Context`
 
-|  Editor  | Command |
-| :------: | :-----: |
-|  VSCode  |  code   |
-| VSCodium | codium  |
+|     Editor      |    Command    |
+| :-------------: | :-----------: |
+|     VSCode      |     code      |
+| VSCode Insiders | code-insiders |
+|    VSCodium     |    codium     |
 
 ## Release Notes
 
-### 1.9.0
-
-- Remove features to override "Open File" menu to open in a new window (1.8.0) because already implemented as Microsoft.
-- Improved command path search process
-- Support VSCode portable edition (#12)
-- Update README.md and CHANGELOG.md
-- Update some packages
-
-### 1.8.0
-
-- Add features to override "Open File" menu to open in a new window (beta).
-- Update README.md and CHANGELOG.md
-- Update some packages
-
-### 1.7.0
-
-- Add features to show the context menu on the file explorer (beta).
-- Update README.md and CHANGELOG.md
-- Update some packages
-
-### 1.6.1
-
-- Security update (update some packages)
-
-### 1.6.0
-
-- Security update (update some packages)
-- Added the ability to auto close active editor (beta).
-- Introduced volta to manage node version.
-- Update README.md and CHANGELOG.md
-
-### 1.5.0
-
-- Security update (update some packages)
-- Added the ability to adjust the display position of the context menu.
-- Update README.md and CHANGELOG.md
-
-### 1.4.3
-
-- Security update (update some packages)
-- Update README.md and CHANGELOG.md
-
-### 1.4.2
-
-- Update README.md and CHANGELOG.md
-- Update some packages
-- Tweak fix
-
-### 1.4.1
-
-- Update README.md and CHANGELOG.md
-
-### 1.4.0
-
-- Fix issue that file cannot be opened if the path contains spaces (#5).
-- Update README.md and CHANGELOG.md
-
-### 1.3.1
-
-- Update README.md and CHANGELOG.md
-
-### 1.3.0
-
-- Merge pull-request (By Mr-Pyro).
-
-### 1.2.0
-
-- Hotfix (Package updates).
-
-### 1.1.0
-
-- Add VSCode command check function.
-- Support Untitled file.
-- Update README.md.
-- Update icon file.
-
-### 1.0.0
-
-Initial release
+See `CHANGELOG.md`.
