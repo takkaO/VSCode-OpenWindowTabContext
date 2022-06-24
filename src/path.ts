@@ -7,8 +7,40 @@ import path = require("path");
 var cache: { [bin: string]: string; } = {};
 
 export function getCodeCommandPath() {
-  	var exec: unknown = vscode.workspace.getConfiguration().get("owtc.command");
-	var command = correctCommandName(typeof exec === "string" ? String(exec) : "code");
+  
+  var exec: unknown = vscode.workspace.getConfiguration().get("owtc.command");
+
+  let cmmd: string = '';
+
+  if (typeof exec === "string")
+  {
+
+    if ((cmmd = String(exec)) === "auto")
+    {
+
+      switch (vscode.env.appName)
+      {
+
+        case "VSCodium":
+          cmmd = "codium";
+          break;
+
+        default:
+          cmmd = "code";
+
+      }
+
+    }
+
+  }
+  else
+  {
+
+    cmmd = "code";
+
+  }
+
+	var command = correctCommandName(cmmd);
 	if (cache[command]) {
 		return cache[command];
 	}
