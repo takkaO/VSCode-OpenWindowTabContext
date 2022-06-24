@@ -56,7 +56,7 @@
 					"owtc.command": {
 						"type": "string",
 						"scope": "application",
-						"default": "code",
+						"default": "auto",
 						"description": "Command to open new window."
 					},
 					"owtc.displayPosition": {
