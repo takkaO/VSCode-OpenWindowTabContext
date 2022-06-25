@@ -4,6 +4,12 @@ All notable changes to the "open-window-tab-context" extension will be documente
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.11.0] - 2022-06-25
+### Changed
+- Support ```auto``` option in ```owtc.command``` (#17)
+- Update some packages
+- Update README.md and CHANGELOG.md
+
 ## [1.10.0] - 2022-06-23
 ### Fixed
 - Fix failed to get command path in Mac (#16)

@@ -15,7 +15,7 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.window.showErrorMessage(msg);
 	}
 
-	let openFileInNewWindow = vscode.commands.registerCommand(op.OpenFileInNewWindowCommandId, op.openFileInNewWindow);
+	let openFileInNewWindow = vscode.commands.registerCommand(op.openFileInNewWindowCommandId, op.openFileInNewWindow);
 	context.subscriptions.push(openFileInNewWindow);
 }
 

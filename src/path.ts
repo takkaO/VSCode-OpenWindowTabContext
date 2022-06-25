@@ -4,88 +4,76 @@ import * as vscode from "vscode";
 import fs = require("fs");
 import path = require("path");
 
-var cache: { [bin: string]: string; } = {};
+var cache: { [bin: string]: string } = {};
 
 export function getCodeCommandPath() {
-  
-  var exec: unknown = vscode.workspace.getConfiguration().get("owtc.command");
+	var exec: unknown = vscode.workspace.getConfiguration().get("owtc.command");
+	let binName: string = '';
 
-  let cmmd: string = '';
+	if (typeof exec === "string") {
+		if ((binName = String(exec)) === "auto") {
+			switch (vscode.env.appName) {
+				case "VSCodium":
+					binName = "codium";
+					break;
+				case "Visual Studio Code - Insiders":
+					binName = "code-insiders";
+					break;
+				default:
+					binName = "code";
+			}
+		}
+	}
+	else {
+		binName = "code";
+	}
 
-  if (typeof exec === "string")
-  {
-
-    if ((cmmd = String(exec)) === "auto")
-    {
-
-      switch (vscode.env.appName)
-      {
-
-        case "VSCodium":
-          cmmd = "codium";
-          break;
-
-        default:
-          cmmd = "code";
-
-      }
-
-    }
-
-  }
-  else
-  {
-
-    cmmd = "code";
-
-  }
-
-	var command = correctCommandName(cmmd);
+	var command = correctCommandName(binName);
 	if (cache[command]) {
 		return cache[command];
 	}
 
-	let code_path = "";
-	let candidate_paths: string[] = [];
+	let codePath = "";
+	let candidatePaths: string[] = [];
 	// candidate 1
-	code_path = path.join(path.dirname(process.execPath), "bin", command);
-	if (fs.existsSync(code_path)) {
-		candidate_paths.push(code_path);
+	codePath = path.join(path.dirname(process.execPath), "bin", command);
+	if (fs.existsSync(codePath)) {
+		candidatePaths.push(codePath);
 	}
 	// candidate 2
-	code_path = path.join(path.dirname(process.execPath), "../Resources/app/bin", command);
-	if (fs.existsSync(code_path)) {
-		candidate_paths.push(code_path);
+	codePath = path.join(path.dirname(process.execPath), "../Resources/app/bin", command);
+	if (fs.existsSync(codePath)) {
+		candidatePaths.push(codePath);
 	}
 	// candidate 3
-	code_path = path.join(path.dirname(process.execPath), "../../../../Resources/app/bin", command);
-	if (fs.existsSync(code_path)) {
-		candidate_paths.push(code_path);
+	codePath = path.join(path.dirname(process.execPath), "../../../../Resources/app/bin", command);
+	if (fs.existsSync(codePath)) {
+		candidatePaths.push(codePath);
 	}
 	// candidate 4
-	code_path = path.join(process.cwd(), command);
-	if (fs.existsSync(code_path)) {
-		candidate_paths.push(code_path);
+	codePath = path.join(process.cwd(), command);
+	if (fs.existsSync(codePath)) {
+		candidatePaths.push(codePath);
 	}
 	// candidate 5
-	code_path = path.join(process.cwd(), "bin", command);
-	if (fs.existsSync(code_path)) {
-		candidate_paths.push(code_path);
+	codePath = path.join(process.cwd(), "bin", command);
+	if (fs.existsSync(codePath)) {
+		candidatePaths.push(codePath);
 	}
 
-	//console.log(candidate_paths);
+	//console.log(candidatePaths);
 
-	if (candidate_paths.length === 0) {
+	if (candidatePaths.length === 0) {
 		return null;
 	}
 
-	if (candidate_paths.length === 1) {
-		cache[command] = candidate_paths[0];
-		return candidate_paths[0];
+	if (candidatePaths.length === 1) {
+		cache[command] = candidatePaths[0];
+		return candidatePaths[0];
 	}
 
 	// when hit multiple candidates
-	for (const p of candidate_paths) {
+	for (const p of candidatePaths) {
 		const contents = fs.readFileSync(p, 'utf-8');
 		if (contents.includes("VSCODE") && contents.includes("ELECTRON")) {
 			// easy check file contents
@@ -101,9 +89,9 @@ export function isCodeCommandAvailable(): boolean {
 	return getCodeCommandPath() !== null;
 }
 
-function correctCommandName(bin_name: string) {
+function correctCommandName(binName: string) {
 	if (process.platform === "win32") {
-		return bin_name + ".cmd";
+		return binName + ".cmd";
 	}
-	return bin_name;
+	return binName;
 }

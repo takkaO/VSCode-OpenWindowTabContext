@@ -23,33 +23,35 @@ This extension is also compatible with VSCodium and Eclipse Theia.
 
 |          OS          | Tested version | Result |
 | :------------------: | :------------: | :----: |
-|      Windows 10      |     1.10.0     |   ✅   |
-| Linux (Ubuntu 22.04) |     1.10.0     |   ✅   |
+|      Windows 11      |     1.11.0     |   ✅   |
+|      Windows 10      |     1.11.0     |   ✅   |
+| Linux (Ubuntu 22.04) |     1.11.0     |   ✅   |
 |    Mac (Monterey)    |     1.10.0     |   ✅   |
 
 ##### VSCode Insiders (1.69.0-insider)
 
 |     OS     | Tested version | Result |
 | :--------: | :------------: | :----: |
-| Windows 10 |     1.10.0     |   ✅   |
+| Windows 11 |     1.11.0     |   ✅   |
 
 ##### VSCodium (1.68.1)
 
 |          OS          | Tested version | Result |
 | :------------------: | :------------: | :----: |
-|      Windows 10      |     1.10.0     |   ✅   |
-| Linux (Ubuntu 22.04) |     1.10.0     |   ✅   |
+|      Windows 10      |     1.11.0     |   ✅   |
+| Linux (Ubuntu 22.04) |     1.11.0     |   ✅   |
 |    Mac (Monterey)    |     1.10.0     |   ✅   |
 
 #### How to change open editor
 
 `Preference` -> `Settings` -> `Extensions` -> `Open Window Tab Context`
 
-|     Editor      |    Command    |
-| :-------------: | :-----------: |
-|     VSCode      |     code      |
-| VSCode Insiders | code-insiders |
-|    VSCodium     |    codium     |
+|                Editor                 |    Command    |
+| :-----------------------------------: | :-----------: |
+| (Auto detection of following editors) |     auto      |
+|                VSCode                 |     code      |
+|            VSCode Insiders            | code-insiders |
+|               VSCodium                |    codium     |
 
 ## Release Notes
 

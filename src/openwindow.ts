@@ -4,13 +4,13 @@ import * as vscode from 'vscode';
 import * as path from './path';
 import cp = require('child_process');
 
-export const OpenFileInNewWindowCommandId = 'open-window-tab-context.openFileInNewWindow';
+export const openFileInNewWindowCommandId = 'open-window-tab-context.openFileInNewWindow';
 
 export async function openFileInNewWindow(context?: any, arg?: any) {
 	if (context instanceof vscode.Uri) {
 		launchNewInstance(context.fsPath);
 
-		if (arg instanceof Array || arg == undefined) {
+		if (arg instanceof Array || arg === undefined) {
 			// When call from file explorer
 			return;
 		}
