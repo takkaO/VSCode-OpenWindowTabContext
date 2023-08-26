@@ -4,6 +4,14 @@ All notable changes to the "open-window-tab-context" extension will be documente
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.12.0] - 2023-08-26
+### Changed
+- Support custom installed path option in ```owtc.command``` (#21)
+- Update some packages
+- Update README.md and CHANGELOG.md
+### Fixed
+- Security update (update some packages)
+
 ## [1.11.0] - 2022-06-25
 ### Changed
 - Support ```auto``` option in ```owtc.command``` (#17)

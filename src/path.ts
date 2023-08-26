@@ -35,6 +35,12 @@ export function getCodeCommandPath() {
 
 	let codePath = "";
 	let candidatePaths: string[] = [];
+
+	// candidate 0
+	if (fs.existsSync(binName)) {
+		// It's full path.
+		candidatePaths.push(binName);
+	}
 	// candidate 1
 	codePath = path.join(path.dirname(process.execPath), "bin", command);
 	if (fs.existsSync(codePath)) {

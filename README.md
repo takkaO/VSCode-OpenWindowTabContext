@@ -19,20 +19,21 @@ This extension is also compatible with VSCodium and Eclipse Theia.
 
 #### Tested Environment
 
-##### VSCode (1.68.1)
+##### VSCode (1.81.1)
 
 |          OS          | Tested version | Result |
 | :------------------: | :------------: | :----: |
-|      Windows 11      |     1.11.0     |   ✅   |
-|      Windows 10      |     1.11.0     |   ✅   |
-| Linux (Ubuntu 22.04) |     1.11.0     |   ✅   |
+|      Windows 11      |     1.12.0     |   ✅   |
+|      Windows 10      |     1.12.0     |   ✅   |
+| Linux (Ubuntu 22.04) |     1.12.0     |   ✅   |
 |    Mac (Monterey)    |     1.10.0     |   ✅   |
 
-##### VSCode Insiders (1.69.0-insider)
+##### VSCode Insiders (1.82.0-insider)
 
 |     OS     | Tested version | Result |
 | :--------: | :------------: | :----: |
-| Windows 11 |     1.11.0     |   ✅   |
+| Windows 11 |     1.12.0     |   ✅   |
+| Windows 10 |     1.12.0     |   ✅   |
 
 ##### VSCodium (1.68.1)
 
@@ -48,6 +49,7 @@ This extension is also compatible with VSCodium and Eclipse Theia.
 
 |                Editor                 |    Command    |
 | :-----------------------------------: | :-----------: |
+|   VSCode (Custom installed folder)    |   your path   |
 | (Auto detection of following editors) |     auto      |
 |                VSCode                 |     code      |
 |            VSCode Insiders            | code-insiders |
